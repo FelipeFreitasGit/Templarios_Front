@@ -21,3 +21,26 @@
     display: none;
   }
 }
+
+.mat-toolbar.mat-primary {
+  background: #dc3545!important;
+  color: white;
+}
+
+@media (min-width: 1000px) {
+  .titulo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar {
+  background: #dc3545!important;
+  color: white;
+}
+
