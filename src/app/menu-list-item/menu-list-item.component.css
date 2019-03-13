@@ -1,0 +1,17 @@
+.mat-list-item {
+  padding: 5px;
+  display: flex;
+  width: 100%;
+  margin-right: 20px;
+}
+
+.routeIcon {
+  margin-right: 25px;
+}
+
+.option ul, li {
+   list-style-type: none;
+   padding: none;
+   margin-bottom: 0px;
+   margin-top: 0px;
+}

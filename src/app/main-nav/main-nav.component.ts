@@ -22,34 +22,40 @@ export class MainNavComponent {
   navItems: NavItem[] = [
     {
       displayName: 'Eventos',
-      iconName: '',
+      iconName: 'event',
       route: '',
       children: []
     },
     {
       displayName: 'Cadastro',
-      iconName: '',
+      iconName: 'group',
       route: '',
       children: [
         {
           displayName: 'Membro',
-          iconName: '',
+          iconName: 'person',
           route: '',
           children: []
         },
         {
           displayName: 'Aniversário',
-          iconName: '',
+          iconName: 'person',
           route: '',
           children: []
         },
         {
           displayName: 'Consulta',
-          iconName: '',
+          iconName: 'find_in_page',
           route: '',
           children: []
         },
       ]
+    },
+    {
+      displayName: 'Trabalhos',
+      iconName: 'work',
+      route: '',
+      children: []
     },
   ]
 }
