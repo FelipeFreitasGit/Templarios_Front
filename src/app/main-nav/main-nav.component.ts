@@ -4,58 +4,25 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { NavItem } from '../shared/navItem.model'
+import { MenuService } from '../menu-service';
 
 @Component({
   selector: 'app-main-nav',
   templateUrl: './main-nav.component.html',
-  styleUrls: ['./main-nav.component.css']
+  styleUrls: ['./main-nav.component.css'],
+  providers: [ MenuService ]
 })
 export class MainNavComponent {
+
+  public navItems: NavItem[] = []
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches)
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
-
-  navItems: NavItem[] = [
-    {
-      displayName: 'Eventos',
-      iconName: 'event',
-      route: '',
-      children: []
-    },
-    {
-      displayName: 'Cadastro',
-      iconName: 'group',
-      route: '',
-      children: [
-        {
-          displayName: 'Membro',
-          iconName: 'person',
-          route: '',
-          children: []
-        },
-        {
-          displayName: 'Aniversário',
-          iconName: 'person',
-          route: '',
-          children: []
-        },
-        {
-          displayName: 'Consulta',
-          iconName: 'find_in_page',
-          route: '',
-          children: []
-        },
-      ]
-    },
-    {
-      displayName: 'Trabalhos',
-      iconName: 'work',
-      route: '',
-      children: []
-    },
-  ]
+  constructor(private breakpointObserver: BreakpointObserver,
+              private menuService: MenuService) {
+              this.navItems = this.menuService.exibirOptionMenu();
+              }
 }

@@ -4,7 +4,7 @@
   <mat-icon class="routeIcon">{{item.iconName}}</mat-icon>
   {{item.displayName}}
   <span fxFlex *ngIf="item.children && item.children.length">
-    <span fxFlex style="margin-left: 30px"></span>
+    <span fxFlex style="margin-left: 100px"></span>
     <mat-icon [@indicatorRotate]="expanded ? 'expanded': 'collapsed'">
       expand_more
     </mat-icon>

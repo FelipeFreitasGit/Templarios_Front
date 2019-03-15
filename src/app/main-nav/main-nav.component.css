@@ -3,7 +3,7 @@
 }
 
 .sidenav {
-  width: 300px;
+  width: 290px;
 }
 
 .sidenav .mat-toolbar {
@@ -15,7 +15,7 @@
   top: 0;
   z-index: 1;
 }
-
+/** Para tela Mobile */
 @media (min-width: 959px) {
   .sidenav {
     display: none;
@@ -27,6 +27,7 @@
   color: white;
 }
 
+/** Para tela PC */
 @media (min-width: 1000px) {
   .titulo {
     width: 100%;

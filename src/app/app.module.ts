@@ -9,12 +9,14 @@ import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { MenuListItemComponent } from './menu-list-item/menu-list-item.component';
+import { MenuNavBarComponent } from './menu-nav-bar/menu-nav-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainNavComponent,
-    MenuListItemComponent
+    MenuListItemComponent,
+    MenuNavBarComponent
   ],
   imports: [
     BrowserModule,
