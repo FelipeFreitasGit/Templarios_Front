@@ -1,0 +1,16 @@
+/* Structure */
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+h1 {
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+  text-align: center;
+  font-size: 1.7em;
+  font-weight: 300;
+}

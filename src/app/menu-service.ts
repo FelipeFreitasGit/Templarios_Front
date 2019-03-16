@@ -33,7 +33,20 @@ export class MenuService {
             displayName: 'Consulta',
             iconName: 'find_in_page',
             route: '',
-            children: []
+            children: [
+              {
+                displayName: 'Usuario',
+                iconName: 'person',
+                route: 'usuario',
+                children: []
+              },
+              {
+                displayName: 'Aniversário',
+                iconName: 'person',
+                route: '',
+                children: []
+              },
+            ]
           },
         ]
       },

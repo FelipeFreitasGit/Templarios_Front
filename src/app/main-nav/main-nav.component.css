@@ -3,7 +3,7 @@
 }
 
 .sidenav {
-  width: 290px;
+  width: 310px;
 }
 
 .sidenav .mat-toolbar {
@@ -43,4 +43,14 @@
 .mat-toolbar {
   background: #dc3545!important;
   color: white;
+}
+
+.conteudo {
+  display: flex;
+  height: 100%;
+}
+
+.conteudo-rotativo {
+  width: 100%;
+  padding: 30px;
 }
