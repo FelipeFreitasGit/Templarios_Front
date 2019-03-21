@@ -2,15 +2,17 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { API } from "../app.api";
-import { retry, map } from "rxjs/operators";
+import { retry, map, tap } from "rxjs/operators";
+import { Usuario } from "../shared/usuario.model";
 
 @Injectable()
 export class UsuarioService {
 
+  user: Usuario
+
   constructor(private http: HttpClient) {}
 
-  listaTodos(): Observable<any> {
-    return this.http.get<any>(`${API}/usuario`)
-      .pipe(retry(10), map((resposta: Response) => resposta.json()))
+  listaTodos(): Observable<Usuario[]> {
+    return this.http.get<Usuario[]>(`${API}/usuario`);
   }
 }

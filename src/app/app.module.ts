@@ -42,6 +42,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatSortModule,
     HttpClientModule
   ],
+  exports: [
+    MatSortModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
