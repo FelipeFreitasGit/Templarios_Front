@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { NavItem } from '../shared/navItem.model';
 import { MenuService } from '../menu-service';
 

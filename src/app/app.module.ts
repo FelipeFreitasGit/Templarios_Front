@@ -7,7 +7,8 @@ import {  MatTableModule,
           MatFormFieldModule,
           MatInputModule,
           MatPaginatorModule,
-          MatSortModule } from '@angular/material'
+          MatSortModule,
+          MatDialogModule } from '@angular/material'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -16,6 +17,7 @@ import { MenuListItemComponent } from './menu-list-item/menu-list-item.component
 import { MenuNavBarComponent } from './menu-nav-bar/menu-nav-bar.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DialogUsuarioComponent } from './usuario/dialog-usuario/dialog-usuario.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     MainNavComponent,
     MenuListItemComponent,
     MenuNavBarComponent,
-    UsuarioComponent
+    UsuarioComponent,
+    DialogUsuarioComponent
   ],
   imports: [
     BrowserModule,
@@ -40,10 +43,14 @@ import { HttpClientModule } from '@angular/common/http';
     MatInputModule,
     MatPaginatorModule,
     MatSortModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule,
   ],
   exports: [
     MatSortModule
+  ],
+  entryComponents: [
+    DialogUsuarioComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,6 +4,8 @@ import {MatTableDataSource,
         MatSort} from '@angular/material';
 import { UsuarioService } from './usuario.service'
 import { Usuario } from '../shared/usuario.model';
+import { MatDialog } from '@angular/material';
+import { DialogUsuarioComponent } from './dialog-usuario/dialog-usuario.component'
 
 
 @Component({
@@ -18,7 +20,10 @@ export class UsuarioComponent implements OnInit {
   displayedColumns = [ 'Cadastro', 'Nome', 'Profissão', 'CPF','RG', 'Nascimento',
                         'Telefone', 'E-mail', 'Nivel', 'Excluir','Alterar' ];
 
-  constructor(private usuarioService: UsuarioService) { }
+  constructor(
+      private usuarioService: UsuarioService,
+      public dialog: MatDialog
+  ) { }
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -41,5 +46,13 @@ export class UsuarioComponent implements OnInit {
     this.usuarioService.listaTodos().subscribe(res => {
       this.dataSource.data = res as Usuario[];
     })
+  }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(DialogUsuarioComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 }
